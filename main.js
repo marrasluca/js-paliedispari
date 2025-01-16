@@ -22,14 +22,31 @@ function palindroma (){
 //  Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 //Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
 
-function numeriRandom( min , max )  {
+function numeriRandom(min , max)  {
     let random = Mathfloor(Math.random() * max) + min;
     return random 
 }
 
+function pari0Dispari(x) {
+    if ( x % 2 === 0 ) {
+        return console.log ( `Il numero scelto: ${x} è pari e ha vinto l'utente `)
+    } else {
+        risultatoPariDispari = "dispari"
+        return console.log ( `Il numero scelto: ${x} è dispari `)
+    }
+}
+
 let sceltaUtente = prompt ( "Scegli fra la parola Pari o Dispari" )
 let numeroUtente = parseInt( prompt( "Inserisci un numero da 1 a 5" )) 
-let numeroPc = numeriRandom ( 1 , 5 )
+let numeroPc = numeriRandom (1, 5)
 let sommaNumeri = numeroUtente + numeroPc 
+let risultatoPariDispari = ""
 
+pari0Dispari(sommaNumeri)
+
+if( sceltaUtente === risultatoPariDispari ){
+    console.log ( "complimenti hai vinto" )
+} else {
+    console.log ( "hai perso" )
+}
 
