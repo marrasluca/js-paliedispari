@@ -18,14 +18,18 @@ function palindroma (){
     document.write( palindroma() )
 
 
-
-
-
-
-
-
-
-
 //Pari e Dispari L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 //  Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 //Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
+
+function numeriRandom( min , max )  {
+    let random = Mathfloor(Math.random() * max) + min;
+    return random 
+}
+
+let sceltaUtente = prompt ( "Scegli fra la parola Pari o Dispari" )
+let numeroUtente = parseInt( prompt( "Inserisci un numero da 1 a 5" )) 
+let numeroPc = numeriRandom ( 1 , 5 )
+let sommaNumeri = numeroUtente + numeroPc 
+
+
